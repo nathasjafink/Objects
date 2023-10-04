@@ -50,12 +50,11 @@ function sentimentAnalyzer(sentence) {
             foundNegativeWords.push(word);
         }
     });
-       const result = {
+    return {
            score: score,
            postiveWords: foundPostiveWords,
            negativeWords: foundNegativeWords
        };
-       return result;
 
 }
 const sentence1 = "I am mega super happy.";
