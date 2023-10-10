@@ -66,3 +66,23 @@ const result2 = sentimentAnalyzer(sentence2);
 console.log(result1);
 console.log(result2);
 
+// 4 - Character frequencies
+function getCharacterFrequencies (word) {
+    const charFrequency = {};
+
+    for (i = 0; i < word.length; i++) {
+        const char = word[i];
+
+        if (charFrequency[char]) {
+            charFrequency[char]++;
+        } else {
+            charFrequency[char] = 1;
+        }
+    }
+    return charFrequency;
+}
+
+const input = "Happy";
+const frequency = getCharacterFrequencies(input);
+console.log(frequency);
+
